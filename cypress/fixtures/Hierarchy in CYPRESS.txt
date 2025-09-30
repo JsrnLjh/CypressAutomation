@@ -1,0 +1,80 @@
+Hierarchy in CYPRESS
+
+
+SPEC File (cy.js) ----> describe blocks (test suites) ----> it blocks (test) 
+
+
+it blocks can be called in two types which is the function () {} or the () => {}
+
+
+in running a cypress there are multiply methods that are:
+
+npx cypress open -  which runs everything and opens up the cypress application
+
+npx cypress run - which runs everything and in multiple base but in a headless version and uses electron as it's default browser
+
+npx cypress run --headed -  which runs everything but in a headed version that also uses electron as it's default browser
+
+--browser - is a command you use to use what browser you desire or available on your device
+--spec - is a command you use to select a specific spec you want to run in your cypress file
+--headed - is a command you use to run a cypress code with a head or visual reference 
+
+
+Locators - helps to identify an element 
+ 
+
+CSS Selector or XPath - a downloadable plugin of cypress or known as Cypress XPath Login
+
+cy.get() - is a command use to locate an element ex. cy.get(Locator)
+
+things that help locate the element are the:
+
+tag id			-> #id
+tag class		-> .class
+tag attribute		[attribute='value']
+tag class attribute	.class[attribute='value']
+
+
+XPath 
+
+npm install -D cypress-xpath
+goto cypress/support/commands.js
+
+//<reference = 'cypress-xpath'>
+
+
+Cypress Assertions - validation points
+
+1) Implicit assertions - default assertions in cypress or built in assertions. two key words mainly used in implicit assertion
+
+	should
+	and
+
+ways on writing an implicit assertions are:
+
+capturing what is desired to be done in every assertion
+using keywords for a more clearer and neat assertion
+
+supported commands or keywords are:
+eq, 
+contain, 
+include, 
+exist, 
+be.visble, 
+have.length, 
+have.value, and etc.
+
+
+2) Explicit assertions - are assertions that we need to write explicitly. two key words mainly used in explicit assertion
+
+	expect - BDD
+	assert - TDD
+
+
+expect - 
+
+
+
+
+
+
